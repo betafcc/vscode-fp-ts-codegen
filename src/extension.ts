@@ -27,7 +27,7 @@ const expandSelection = () => {
       run(
         editor.document.getText(selection),
         toOptions((vscode.workspace.getConfiguration(
-          'extension'
+          'fp-ts-codegen'
         ) as unknown) as ExtensionOptions)
       ).fold(warn, insertSnippet(editor, selection));
     }

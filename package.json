@@ -17,7 +17,7 @@
     "commands": [
       {
         "command": "extension.expandSelection",
-        "title": "Expand ADT"
+        "title": "fp-ts-codegen: Expand Selection"
       }
     ],
     "configuration": [
@@ -25,22 +25,22 @@
         "type": "object",
         "title": "fp-ts Code Generator Configuration",
         "properties": {
-          "extension.tagName": {
+          "fp-ts-codegen.tagName": {
             "description": "the name of the field used as tag",
             "type": "string",
             "default": "type"
           },
-          "extension.foldName": {
+          "fp-ts-codegen.foldName": {
             "description": "the name prefix used for pattern matching functions",
             "type": "string",
             "default": "fold"
           },
-          "extension.matcheeName": {
+          "fp-ts-codegen.matcheeName": {
             "description": "the name used for the input of pattern matching functions",
             "type": "string",
             "default": "fa"
           },
-          "extension.handlersStyle": {
+          "fp-ts-codegen.handlersStyle": {
             "description": "the pattern matching handlers can be expressed as positional arguments or a single object literal `tag -> handler`",
             "enum": [
               "positional",
@@ -49,12 +49,12 @@
             "type": "string",
             "default": "positional"
           },
-          "extension.handlersName": {
+          "fp-ts-codegen.handlersName": {
             "description": "the name used for the handler if handlersStyle is \"record\"",
             "type": "string",
             "default": "handlers"
           },
-          "extension.encoding": {
+          "fp-ts-codegen.encoding": {
             "enum": [
               "fp-ts",
               "literal"
