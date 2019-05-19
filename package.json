@@ -10,13 +10,13 @@
     "Other"
   ],
   "activationEvents": [
-    "onLanguage:typescript"
+    "onCommand:fp-ts-codegen.expandSelection"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "extension.expandSelection",
+        "command": "fp-ts-codegen.expandSelection",
         "title": "fp-ts-codegen: Expand Selection"
       }
     ],

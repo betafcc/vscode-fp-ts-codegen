@@ -8,7 +8,7 @@ export function activate(context: vscode.ExtensionContext) {
   console.log('Congratulations, your extension "vscode-fp-ts-codegen" is now active!');
 
   context.subscriptions.push(
-    vscode.commands.registerCommand('extension.expandSelection', expandSelection)
+    vscode.commands.registerCommand('fp-ts-codegen.expandSelection', expandSelection)
   );
 }
 
