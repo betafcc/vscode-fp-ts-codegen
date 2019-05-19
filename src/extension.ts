@@ -20,16 +20,16 @@ const expandSelection = () => {
   if (!editor) {
     warn('No Active TextEditor');
   } else {
-    const range = editor.selection;
-    if (range.isEmpty) {
+    const selection = editor.selection;
+    if (selection.isEmpty) {
       warn('No selection to Expand');
     } else {
       run(
-        editor.document.getText(range),
+        editor.document.getText(selection),
         toOptions((vscode.workspace.getConfiguration(
           'extension'
         ) as unknown) as ExtensionOptions)
-      ).fold(warn, insertSnippet(editor, range));
+      ).fold(warn, insertSnippet(editor, selection));
     }
   }
 };
@@ -58,8 +58,8 @@ const warn = (msg: string) => {
   vscode.window.showWarningMessage(msg);
 };
 
-const insertSnippet = (editor: vscode.TextEditor, range: vscode.Range) => (
+const insertSnippet = (editor: vscode.TextEditor, selection: vscode.Selection) => (
   snippet: string
 ) => {
-  editor.insertSnippet(new vscode.SnippetString(snippet), range);
+  editor.insertSnippet(new vscode.SnippetString(snippet), selection);
 };
