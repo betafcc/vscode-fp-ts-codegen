@@ -2,9 +2,18 @@
   "name": "vscode-fp-ts-codegen",
   "displayName": "fp-ts Code Generator",
   "description": "Transform selection using gcanti/fp-ts-codegen",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "author": "Beta Faccion <betafcc@gmail.com> (https://github.com/betafcc)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betafcc/vscode-fp-ts-codegen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/betafcc/vscode-fp-ts-codegen/issues"
+  },
   "engines": {
-    "vscode": "^1.34.0"
+    "vscode": "^1.19.0"
   },
   "categories": [
     "Other"
@@ -55,6 +64,7 @@
             "default": "handlers"
           },
           "fp-ts-codegen.encoding": {
+            "description": "the encoding to generate the types, either `literal` for pure TS or `fp-ts`, to use fp-ts constructs",
             "enum": [
               "fp-ts",
               "literal"
