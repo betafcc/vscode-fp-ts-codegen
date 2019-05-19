@@ -1,0 +1,86 @@
+{
+  "name": "vscode-fp-ts-codegen",
+  "displayName": "fp-ts Code Generator",
+  "description": "Transform selection using gcanti/fp-ts-codegen",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.34.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:typescript"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.expandSelection",
+        "title": "Expand ADT"
+      }
+    ],
+    "configuration": [
+      {
+        "type": "object",
+        "title": "fp-ts Code Generator Configuration",
+        "properties": {
+          "extension.tagName": {
+            "description": "the name of the field used as tag",
+            "type": "string",
+            "default": "type"
+          },
+          "extension.foldName": {
+            "description": "the name prefix used for pattern matching functions",
+            "type": "string",
+            "default": "fold"
+          },
+          "extension.matcheeName": {
+            "description": "the name used for the input of pattern matching functions",
+            "type": "string",
+            "default": "fa"
+          },
+          "extension.handlersStyle": {
+            "description": "the pattern matching handlers can be expressed as positional arguments or a single object literal `tag -> handler`",
+            "enum": [
+              "positional",
+              "record"
+            ],
+            "type": "string",
+            "default": "positional"
+          },
+          "extension.handlersName": {
+            "description": "the name used for the handler if handlersStyle is \"record\"",
+            "type": "string",
+            "default": "handlers"
+          },
+          "extension.encoding": {
+            "enum": [
+              "fp-ts",
+              "literal"
+            ],
+            "type": "string",
+            "default": "literal"
+          }
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^3.3.1",
+    "vscode": "^1.1.28",
+    "tslint": "^5.12.1",
+    "@types/node": "^10.12.21",
+    "@types/mocha": "^2.2.42"
+  },
+  "dependencies": {
+    "fp-ts-codegen": "^0.3.0"
+  }
+}
