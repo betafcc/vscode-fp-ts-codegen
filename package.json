@@ -8,7 +8,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/betafcc/vscode-fp-ts-codegen.git"
+    "url": "https://github.com/betafcc/vscode-fp-ts-codegen.git"
   },
   "bugs": {
     "url": "https://github.com/betafcc/vscode-fp-ts-codegen/issues"
