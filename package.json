@@ -2,6 +2,7 @@
   "name": "vscode-fp-ts-codegen",
   "displayName": "fp-ts Code Generator",
   "description": "Transform selection using gcanti/fp-ts-codegen",
+  "icon": "images/logo.png",
   "version": "1.0.0",
   "author": "Beta Faccion <betafcc@gmail.com> (https://github.com/betafcc)",
   "license": "MIT",

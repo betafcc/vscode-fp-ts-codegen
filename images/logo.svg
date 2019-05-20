@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 630">
+  <defs>
+    <clipPath id="cut-off">
+      <rect x="0" y="0" width="570" height="570"></rect>
+    </clipPath>
+  </defs>
+  <rect width="630" height="630" fill="#0075c6"></rect>
+  <g clip-path="url(#cut-off)">
+    <text x="180" y="535" font-family="Fira Code" font-weight="bold" fill="white" font-size="350">>>=</text>
+  </g>
+</svg>
